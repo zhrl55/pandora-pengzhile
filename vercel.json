@@ -1,0 +1,20 @@
+{
+  "name": "pandora-cloud",
+  "version": 2,
+  "framework": null,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "main.py"
+    }
+  ],
+  "env": {
+    "PANDORA_SERVER_LISTEN": "false"
+  }
+}
